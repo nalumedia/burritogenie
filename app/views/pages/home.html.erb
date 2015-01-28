@@ -1,19 +1,57 @@
+	<div class="row">
+	<div class="col-md-12 text-center">
+	<br /><br />
 <h1>Burrito Genie.</h1>
 <img src="https://s3.amazonaws.com/burritogenie/images/burritoswami.png"><br /><br />
-<img src="https://s3.amazonaws.com/burritogenie/images/burrito.gif"><br /><br />
 <p>When he is on it is on.</p>
-
-<hr />
-						Charges <br />
+		</div> <!-- end md-12 -->
+	</row><!-- end row --> 
+	<div class="row">
+		<div class="col-md-4 text-center">
+			<img src="https://s3.amazonaws.com/burritogenie/images/burrito.gif" height="200"> <br />
+									Charges <br />
 						<%= form_tag charges_path do %>
 						 <article>
 						   <label class="amount">
 						     <span>Amount: $5.00</span>
 						   </label>
 						</article>
-
 						 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 						   data-key="TODO: Key"
 						   data-description="A month's subscription"
 						   data-amount="500"></script>
 						<% end %>
+		</div><!-- end md-4 -->
+			<div class="col-md-4 text-center">
+				<img src="https://s3.amazonaws.com/burritogenie/images/burrito.gif" height="200"> <br />
+									Charges <br />
+						<%= form_tag charges_path do %>
+						 <article>
+						   <label class="amount">
+						     <span>Amount: $5.00</span>
+						   </label>
+						</article>
+						 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+						   data-key="TODO: Key"
+						   data-description="A month's subscription"
+						   data-amount="500"></script>
+						<% end %>
+
+
+		</div><!-- end md-4 -->
+			<div class="col-md-4 text-center">
+				<img src="https://s3.amazonaws.com/burritogenie/images/burrito.gif" height="200"> <br />
+									Charges <br />
+						<%= form_tag charges_path do %>
+						 <article>
+						   <label class="amount">
+						     <span>Amount: $5.00</span>
+						   </label>
+						</article>
+						 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+						   data-key="TODO: Key"
+						   data-description="A month's subscription"
+						   data-amount="500"></script>
+						<% end %>
+		</div><!-- end md-4 -->
+	</div><!-- end row -->
