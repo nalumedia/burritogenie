@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem "figaro"
+
 # Add stripe for payment processing
 
 # bundle exec rake doc:rails generates the API under doc/api.
