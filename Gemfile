@@ -19,6 +19,14 @@ gem 'jquery-rails'
 gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
+
+#added gems
+gem 'bootstrap-sass'
+
+gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
+
+# Add stripe for payment processing
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
