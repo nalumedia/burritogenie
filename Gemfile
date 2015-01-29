@@ -25,6 +25,8 @@ gem 'bootstrap-sass'
 
 gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
 
+gem 'letter_opener', group: :development
+
 gem "figaro"
 
 # Add stripe for payment processing
