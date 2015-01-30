@@ -20,6 +20,10 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
+
+
 #added gems
 gem 'bootstrap-sass'
 
