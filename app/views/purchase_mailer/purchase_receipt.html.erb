@@ -1,5 +1,9 @@
-<p>Thanks!</p>
+<p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
 
-Thanks for buying our ebook!
+<p>You order will be delivered promptly.</p>
 
-<%= link_to "Download your ebook", "https://s3.amazonaws.com/one_month_commerce/hello.pdf" %>
+<p>Order Email: <%= @purchase.email %></p>
+<p>Order PID: <%= @purchase.id %></p>
+<p>Amount: <%= @purchase.amount %></p>
+<p>Description: <%= @purchase.description %></p>
+<p>Order Receieved: <%= @purchase.created_at %></p>
