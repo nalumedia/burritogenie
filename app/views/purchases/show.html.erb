@@ -1,12 +1,11 @@
 <br /><br />
-<center>
 <img src="https://s3.amazonaws.com/burritogenie/images/burritocarpet.png"><br/><br />
-</center>
 <p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
 
 <p>You order of <%= @purchase.description %> was received at <%= @purchase.created_at %> and will be delivered promptly.</p>
 	<hr />
 	<%= form_for(@deliverto) do |f| %>
+
   <% if @deliverto.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@deliverto.errors.count, "error") %> prohibited this deliverto from being saved:</h2>
@@ -23,6 +22,12 @@
     <%= f.label "Delivery Address" %><br>
     <%= f.text_field :deliverto_street, class: "form-control" %>
   </div>
+  <div class="actions">
+  <%= hidden_field_tag :deliverto_uuid, :value => @purchase.uuid %>
+   </div>
+
+
+
   <div class="form-group">
     <%= f.label "Zip Code" %><br>
     <%= f.text_field :deliverto_zip, class: "form-control" %>
@@ -36,7 +41,7 @@
     <%= f.text_area :deliverto_instructions %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit :value => "Genie, Bring Me My Burrito", class: "btn btn-success btn-lg btn-block" %>
   </div>
 <% end %>
 
