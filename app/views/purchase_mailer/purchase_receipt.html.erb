@@ -1,6 +1,6 @@
 <p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
 
-<p>You order will be delivered promptly.</p>
+<p>You order of <%= @purchase.description %> was received at <%= @purchase.created_at %> and will be delivered promptly.</p>
 
 <p>Order Email: <%= @purchase.email %></p>
 <p>Order PID: <%= @purchase.id %></p>

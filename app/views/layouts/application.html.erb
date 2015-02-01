@@ -4,24 +4,21 @@
   <title>Burritogenie | When He Is On It Is On.</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container text-right">
-    <%= link_to "Home", root_path %>
-  </div>
-</nav>
 			<div class="container">
 							<%= yield %>
-
-
-<div class="row">
-	<div class="col-md-12 text-right"><br />
+<div class="row"><div class="footertext">
+<div class="col-md-4 text-left"><%= link_to "Home", root_path %></div><!-- end col-md-4 -->
+	<div class="col-md-8 text-right"><br />
 		<span class="glyphicon glyphicon-flag"></span> Made in Encinitas, CA. 
           &copy; 2014 Nalu Media, All Rights Reserved 
-	</div><!-- end md-12-->
+
+	</div><!-- end md-8-->
+  </div><!-- end footertext -->
 </div> <!-- end row -->
 
 			</div><!-- end container --> 

@@ -12,8 +12,23 @@
        font-url('glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 
+h1 {
+
+	font-family: 'Lobster', cursive;
+	font-size: 80px;
+	letter-spacing: 8px;
+	color: #16a085;
+}
 
 .container {
-	padding-top: 50px;
+	padding-top: 20px;
 	padding-bottom: 10px;
 }
+
+.footertext {
+	padding-top: 30px;
+	font-size: 10px;
+	color: #7f8c8d;
+
+}
+

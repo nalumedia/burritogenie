@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Deliverto street:</strong>
+  <%= @deliverto.deliverto_street %>
+</p>
+
+<p>
+  <strong>Deliverto zip:</strong>
+  <%= @deliverto.deliverto_zip %>
+</p>
+
+<p>
+  <strong>Deliverto phone:</strong>
+  <%= @deliverto.deliverto_phone %>
+</p>
+
+<p>
+  <strong>Deliverto instructions:</strong>
+  <%= @deliverto.deliverto_instructions %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_deliverto_path(@deliverto) %> |
+<%= link_to 'Back', delivertos_path %>

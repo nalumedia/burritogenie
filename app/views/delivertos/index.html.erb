@@ -1,0 +1,38 @@
+<br /><br /><br />
+<h1>Deliveries</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Street</th>
+      <th>Zip</th>
+      <th>Phone</th>
+      <th>Instructions</th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @delivertos.each do |deliverto| %>
+      <tr>
+        <td><i class="fa fa-building"></i> <%= deliverto.deliverto_street %></td>
+        <td><%= deliverto.deliverto_zip %></td>
+        <td><%= deliverto.deliverto_phone %></td>
+        <td><%= deliverto.deliverto_instructions %></td>
+        <td><%= link_to 'View', deliverto %> |
+        <%= link_to 'Edit', edit_deliverto_path(deliverto) %> |
+        <%= link_to 'Delete', deliverto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+ToDo:<ul>
+<li>Lock pages / devise</li>
+<li>Driver has many deliver tos</li>
+<li>UUID Hidden form</li>
+</ol>
+<br />
+<i class="fa fa-building"></i>
+<%= link_to 'Create New Delivery', new_deliverto_path %>

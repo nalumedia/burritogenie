@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deliverto_street: MyString
+  deliverto_zip: MyString
+  deliverto_phone: MyString
+  deliverto_instructions: MyText
+
+two:
+  deliverto_street: MyString
+  deliverto_zip: MyString
+  deliverto_phone: MyString
+  deliverto_instructions: MyText

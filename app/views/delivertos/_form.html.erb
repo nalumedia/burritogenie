@@ -1,0 +1,33 @@
+<%= form_for(@deliverto) do |f| %>
+  <% if @deliverto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@deliverto.errors.count, "error") %> prohibited this deliverto from being saved:</h2>
+
+      <ul>
+      <% @deliverto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :deliverto_street %><br>
+    <%= f.text_field :deliverto_street %>
+  </div>
+  <div class="field">
+    <%= f.label :deliverto_zip %><br>
+    <%= f.text_field :deliverto_zip %>
+  </div>
+  <div class="field">
+    <%= f.label :deliverto_phone %><br>
+    <%= f.text_field :deliverto_phone %>
+  </div>
+  <div class="field">
+    <%= f.label :deliverto_instructions %><br>
+    <%= f.text_area :deliverto_instructions %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
