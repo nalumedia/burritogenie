@@ -2,6 +2,9 @@
 @import "bootstrap";
 
 
+$btn-success-bg: #F28B30;
+$btn-success-color: #F28B30;
+
 /* Import the fonts */
 @font-face {
   font-family: 'Glyphicons Halflings';
@@ -13,11 +16,10 @@
 }
 
 h1 {
-
 	font-family: 'Lobster', cursive;
 	font-size: 80px;
 	letter-spacing: 8px;
-	color: #16a085;
+	color: #BF2806;
 }
 
 .container {
@@ -29,6 +31,27 @@ h1 {
 	padding-top: 30px;
 	font-size: 10px;
 	color: #7f8c8d;
+
+}
+
+#footertext a:link {
+	color: #2E2E2D;
+	text-decoration: none;
+}
+
+#footertext a:visited {
+	color: #2E2E2D;
+	text-decoration: none;
+}
+
+#footertext a:hover {
+	color: #BFBE58;
+	transition: color 0.3s ease-in;
+	text-decoration: none;
+}
+
+.container {
+width: 100%;
 
 }
 
