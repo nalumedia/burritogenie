@@ -1,4 +1,5 @@
 class ContactsController < InheritedResources::Base
+
 		
 
 

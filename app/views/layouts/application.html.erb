@@ -19,7 +19,7 @@
 			<div class="container">
 							<%= yield %>
               <div class="row"><div class="footertext">
-              	<div class="col-md-12 text-right" id="footertext"><br /><%= link_to "Home", root_path %> | 
+              	<div class="col-md-12 text-center" id="footertext"><br /><%= link_to "Home", root_path %> | 
                   <% if user_signed_in? %>
                   <i class="fa fa-user"></i> &nbsp; 
                   <%= link_to "Contacts", contacts_path %>
@@ -34,8 +34,9 @@
                   <%= link_to "Login", new_user_session_path %>
                   &nbsp; |
                   <% end %>
+                  <hr />
               		 <span class="glyphicon glyphicon-flag"></span> Made in Encinitas, CA. 
-                        &copy; 2014 Nalu Media, All Rights Reserved &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+                        &copy; 2015 Dabawallah, LLC. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 
               	</div><!-- end md-8-->
                 </div><!-- end footertext -->
