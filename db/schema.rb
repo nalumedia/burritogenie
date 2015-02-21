@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150220170116) do
+ActiveRecord::Schema.define(version: 20150221170251) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -45,6 +45,16 @@ ActiveRecord::Schema.define(version: 20150220170116) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+
+  create_table "burritolocations", force: true do |t|
+    t.string   "burritolocation_name"
+    t.text     "burritolocation_description"
+    t.string   "burritolocation_address"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "burritolocation_phone"
+    t.string   "burritolocation_url"
+  end
 
   create_table "contacts", force: true do |t|
     t.string   "contact_name"

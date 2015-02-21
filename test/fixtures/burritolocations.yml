@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  burritolocation_name: MyString
+  burritolocation_description: MyText
+  burritolocation_address: MyString
+
+two:
+  burritolocation_name: MyString
+  burritolocation_description: MyText
+  burritolocation_address: MyString

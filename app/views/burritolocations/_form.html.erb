@@ -1,0 +1,37 @@
+<%= form_for(@burritolocation) do |f| %>
+  <% if @burritolocation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@burritolocation.errors.count, "error") %> prohibited this burritolocation from being saved:</h2>
+
+      <ul>
+      <% @burritolocation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :burritolocation_name %><br>
+    <%= f.text_field :burritolocation_name %>
+  </div>
+  <div class="field">
+    <%= f.label :burritolocation_description %><br>
+    <%= f.text_area :burritolocation_description %>
+  </div>
+  <div class="field">
+    <%= f.label :burritolocation_address %><br>
+    <%= f.text_field :burritolocation_address %>
+  </div>
+   <div class="field">
+    <%= f.label :burritolocation_phone %><br>
+    <%= f.text_field :burritolocation_phone %>
+  </div>
+   <div class="field">
+    <%= f.label :burritolocation_url %><br>
+    <%= f.text_field :burritolocation_url %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

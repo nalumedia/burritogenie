@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :burritolocations
+
   resources :contacts
 
   devise_for :users

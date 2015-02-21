@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Burritolocation name:</strong>
+  <%= @burritolocation.burritolocation_name %>
+</p>
+
+<p>
+  <strong>Burritolocation description:</strong>
+  <%= @burritolocation.burritolocation_description %>
+</p>
+
+<p>
+  <strong>Burritolocation address:</strong>
+  <%= @burritolocation.burritolocation_address %>
+</p>
+
+<%= link_to 'Edit', edit_burritolocation_path(@burritolocation) %> |
+<%= link_to 'Back', burritolocations_path %>
