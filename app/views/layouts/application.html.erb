@@ -22,7 +22,8 @@
               	<div class="col-md-12 text-center" id="footertext"><br /><%= link_to "Home", root_path %> | 
                   <% if user_signed_in? %>
                   <i class="fa fa-user"></i> &nbsp; 
-                
+                  <%= link_to "Locations", burritolocations_path %>
+                  &nbsp; |
                   <i class="fa fa-user"></i> &nbsp; 
                   <%= link_to "Contacts", contacts_path %>
                   &nbsp; |
