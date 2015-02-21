@@ -1,5 +1,5 @@
 class ContactsController < InheritedResources::Base
-				before_action :authenticate_user!, except: [:show]
+		
 
 
   private

@@ -1,3 +1,5 @@
+<% if user_signed_in? %>
+
 <h1>Listing contacts</h1>
 
 <table>
@@ -29,3 +31,7 @@
 <br>
 
 <%= link_to 'New Contact', new_contact_path %>
+
+<% else %>
+YOU DO NOT HAVE PERMISSION TO ENTER THIS AREA 
+<% end %>
