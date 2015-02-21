@@ -23,14 +23,11 @@
                   <%= link_to "Profile", edit_user_registration_path %>
                   &nbsp; |
                   <i class="fa fa-minus-square"></i>&nbsp; 
-
-            <%= link_to "Logout", destroy_user_session_path, method: :delete %>
-              
-          
-
-                
+                  <%= link_to "Logout", destroy_user_session_path, method: :delete %>
                   <% else %>
-                  
+                  <i class="fa fa-user"></i> &nbsp; 
+                  <%= link_to "Login", new_user_session_path %>
+                  &nbsp; |
                   <% end %>
               		 <span class="glyphicon glyphicon-flag"></span> Made in Encinitas, CA. 
                         &copy; 2014 Nalu Media, All Rights Reserved &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
