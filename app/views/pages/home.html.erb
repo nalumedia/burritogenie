@@ -5,10 +5,12 @@
 	</div> <!-- end md-12 -->
 	</row><!-- end row --> 
 
-	<% if user_signed_in? %>
-					<div class="row">
+			<div class="row">
 											<div class="col-md-4"></div><!-- end md-4 -->
 											<div class="col-md-4 text-center">
+			<!-- begin authentication --> 
+			<% if user_signed_in? %>
+																			<!-- begin buy button --> 
 																			<%= form_tag charges_path, id: 'chargeForm' do %>
 																	    <script src="https://checkout.stripe.com/checkout.js"></script>
 																	    <%= hidden_field_tag 'stripeToken' %>
@@ -34,19 +36,15 @@
 																	   })
 																	  </script>
 																	<% end %>
-											</div><!-- end md-4 -->
-											<div class="col-md-4"></div><!-- end md-4 -->
-
-					</div><!-- end row -->
-
-		<% else %>
-		The burrito genie delivers hot fresh burritos to your door. We are coming soon to your area. Let the genie know you are interested by inputting your contact info below. 
+																	<!-- end buy button --> 
+								<% else %>
+								<p>The burrito genie delivers hot fresh burritos to your door. We are coming soon to your area. Let the genie know you are interested by inputting your contact info below.</p>
 								<!-- contact form --> 
-									<%= form_for(@contact) do |f| %>
+								<center>
+								<%= form_for(@contact) do |f| %>
 							  <% if @contact.errors.any? %>
 							    <div id="error_explanation">
 							      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
-
 							      <ul>
 							      <% @contact.errors.full_messages.each do |message| %>
 							        <li><%= message %></li>
@@ -54,19 +52,15 @@
 							      </ul>
 							    </div>
 							  <% end %>
-
-
-							  <div class="form-group">
-							    <%= f.label "Your Name" %><br>
-							    <%= f.text_field :contact_name, class: "form-control" %>
+							  	  <div class="form-group">
+							    <%= f.text_field :contact_name, :placeholder => "Your Name", class: "form-control" %>
 							  </div>
 							  <div class="form-group">
-							    <%= f.label "Your Email" %><br>
-							    <%= f.text_field :contact_email, class: "form-control" %>
+							 
+							    <%= f.text_field :contact_email, :placeholder => "Your Email", class: "form-control" %>
 							  </div>
 							  <div class="form-group">
-							    <%= f.label "Your Zip Code" %><br>
-							    <%= f.text_field :contact_zip, class: "form-control" %>
+							    <%= f.text_field :contact_zip, :placeholder => "Your Zip Code", class: "form-control" %>
 							  </div>
 													  <% if user_signed_in? %>
 
@@ -76,12 +70,13 @@
 													  </div>
 													  <% end %> <!-- end authenticated --> 
 							  <div class="actions">
-							    <%= f.submit "Get On The List" %>
+							    <%= f.submit "Tell The Genie You Are Interested" %>
 							  </div>
 							<% end %>
+						</center>
 							<!-- end contact form --> 
+		<% end %> <!-- end suthentication -->
 
-
-
-
-		<% end %> <!-- end suthentication --> 
+					</div><!-- end md-4 -->
+					<div class="col-md-4"></div><!-- end md-4 -->
+					</div><!-- end row -->
