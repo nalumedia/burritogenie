@@ -11,14 +11,19 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <center>
      <% flash.each do |name, msg| %>
      <%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+   </center>
 <% end %>
 			<div class="container">
 							<%= yield %>
               <div class="row"><div class="footertext">
               	<div class="col-md-12 text-right" id="footertext"><br /><%= link_to "Home", root_path %> | 
                   <% if user_signed_in? %>
+                  <i class="fa fa-user"></i> &nbsp; 
+                  <%= link_to "Contacts", contacts_path %>
+                  &nbsp; |
                   <i class="fa fa-user"></i> &nbsp; 
                   <%= link_to "Profile", edit_user_registration_path %>
                   &nbsp; |
