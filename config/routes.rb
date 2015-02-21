@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :contacts
+
+  devise_for :users
+  resources :delivertostatuses
+
   resources :delivertos
 
   devise_for :admin_users, ActiveAdmin::Devise.config

@@ -1,0 +1,27 @@
+<h1>Listing delivertostatuses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Delivertostatus name</th>
+      <th>Deliverttostatus definition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @delivertostatuses.each do |delivertostatus| %>
+      <tr>
+        <td><%= delivertostatus.delivertostatus_name %></td>
+        <td><%= delivertostatus.deliverttostatus_definition %></td>
+        <td><%= link_to 'Show', delivertostatus %></td>
+        <td><%= link_to 'Edit', edit_delivertostatus_path(delivertostatus) %></td>
+        <td><%= link_to 'Destroy', delivertostatus, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Delivertostatus', new_delivertostatus_path %>

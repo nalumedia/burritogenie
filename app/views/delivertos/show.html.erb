@@ -1,12 +1,12 @@
 
 <p id="notice"><%= notice %></p>
-<h1>The Genie is En Route. See you soon amigos.</h1>
+<h1>The Genie is En Route. See you soon amigo.</h1>
 
 
 <p>Order Details:<br />
 	One Burrito for $10.00 Delivered to  <%= @deliverto.deliverto_street %>, <%= @deliverto.deliverto_zip %>. If there are any issues we will call you at: <%= @deliverto.deliverto_phone %>. <br /><br /> The Genie is aware of your instructions:  <%= @deliverto.deliverto_instructions %>. 
 </p>
-<%= link_to 'Edit My Delivery Information', edit_deliverto_path(@deliverto) %><br /><br />
+
 <i>Order UUID: <%= @deliverto.deliverto_uuid %></i>
 
 

@@ -1,0 +1,38 @@
+	<div class="row">
+	<div class="col-md-12 text-center">
+
+<p id="notice"><%= notice %></p>
+
+<img src="https://s3.amazonaws.com/burritogenie/images/genie.png"><br /><br />
+<h1>The Genie Welcomes You</h1>
+We will be in touch when the genie is ready for action. 
+
+<% if user_signed_in? %>
+
+<p>
+  <strong>Contact name:</strong>
+  <%= @contact.contact_name %>
+</p>
+
+<p>
+  <strong>Contact email:</strong>
+  <%= @contact.contact_email %>
+</p>
+
+<p>
+  <strong>Contact zip:</strong>
+  <%= @contact.contact_zip %>
+</p>
+
+<p>
+  <strong>Contact status:</strong>
+  <%= @contact.contact_status %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
+
+<% end %>
+
+</div><!-- end md-12 -->
+</div><!-- end row --> 

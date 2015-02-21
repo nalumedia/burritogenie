@@ -23,6 +23,14 @@
     <%= f.label :deliverto_phone %><br>
     <%= f.text_field :deliverto_phone %>
   </div>
+
+        <div class="form-group">
+<%= f.label :delivertostatus_id %><br />
+<%= collection_select(:deliverto,:delivertostatus_id,Delivertostatus.all,:id,:delivertostatus_name) %>
+   
+  </div>
+  
+
   <div class="field">
     <%= f.label :deliverto_instructions %><br>
     <%= f.text_area :deliverto_instructions %>

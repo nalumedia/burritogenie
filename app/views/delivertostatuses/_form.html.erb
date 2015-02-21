@@ -1,0 +1,25 @@
+<%= form_for(@delivertostatus) do |f| %>
+  <% if @delivertostatus.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@delivertostatus.errors.count, "error") %> prohibited this delivertostatus from being saved:</h2>
+
+      <ul>
+      <% @delivertostatus.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :delivertostatus_name %><br>
+    <%= f.text_field :delivertostatus_name %>
+  </div>
+  <div class="field">
+    <%= f.label :deliverttostatus_definition %><br>
+    <%= f.text_area :deliverttostatus_definition %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
