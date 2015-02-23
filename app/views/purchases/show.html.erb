@@ -2,6 +2,7 @@
 <p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
 
 <p>You order of <%= @purchase.description %> was received at <%= @purchase.created_at.to_formatted_s(:long_ordinal) %> and will be delivered promptly.</p>
+<p>Wish ID: <%= @purchase.wish_id %></p>
 
 
 <!-- <p>Order Email: <%= @purchase.email %></p>

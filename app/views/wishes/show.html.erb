@@ -1,6 +1,7 @@
 
 <h1><%= notice %></h1>
 <p>Thank you for your order. The Genie will deliver ** Product ** to  <%= @wish.wish_address %>, <%= @wish.wish_zip %>. The genie knows your special instructions which are: <%= @wish.wish_instructions %>. Thank you. 
+	ID = <%= @wish.id %>
 </p>
 
 <p>In order to complete your purchase please:</p>
@@ -9,7 +10,9 @@
 																	    <script src="https://checkout.stripe.com/checkout.js"></script>
 																	    <%= hidden_field_tag 'stripeToken' %>
 																	    <%= hidden_field_tag 'stripeEmail' %> 
-																	    <%= hidden_field_tag 'amount', 1000 %> 
+																	    <%= hidden_field_tag 'amount', 1000 %>
+																	     <%= hidden_field_tag 'wish_id', @wish.id %> 
+
 																	    <button id="btn-buy" type="button" class="btn btn-success"><i class="fa fa-motorcycle fa-4x"></i> <h1>Order</h1></button>
 																	    <script>
 																	    var handler = StripeCheckout.configure({
@@ -31,7 +34,7 @@
 																	  </script>
 																	<% end %>
 																	<!-- end buy button --> 
-																	
+
 
 <% if user_signed_in? %> 
 <%= link_to 'Edit', edit_wish_path(@wish) %> |

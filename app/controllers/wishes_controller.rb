@@ -15,15 +15,18 @@ class WishesController < ApplicationController
   # GET /wishes/new
   def new
     @wish = Wish.new
+    @delivertostatuses = Delivertostatus.all
   end
 
   # GET /wishes/1/edit
   def edit
+    @delivertostatuses = Delivertostatus.all
   end
 
   # POST /wishes
   # POST /wishes.json
   def create
+    @delivertostatuses = Delivertostatus.all
     @wish = Wish.new(wish_params)
 
     respond_to do |format|
@@ -69,6 +72,6 @@ class WishesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def wish_params
-      params.require(:wish).permit(:wish_address, :wish_phone, :wish_zip, :wish_instructions)
+      params.require(:wish).permit(:wish_address, :wish_phone, :wish_zip, :wish_instructions, :delivertostatus_id)
     end
 end

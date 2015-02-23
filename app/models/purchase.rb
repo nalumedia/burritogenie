@@ -1,5 +1,6 @@
 class Purchase < ActiveRecord::Base
 	after_create :email_purchaser
+	belongs_to :wish
 
 
 	def to_param

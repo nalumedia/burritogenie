@@ -24,6 +24,11 @@
     <%= f.text_field :wish_zip, class: "form-control"  %>
   </div>
   <div class="form-group">
+<%= f.label :delivertostatus_id %><br />
+    <%= collection_select(:wish, :delivertostatus_id, @delivertostatuses, :id, :delivertostatus_name, {:prompt => false}) %> 
+  </div>
+
+  <div class="form-group">
     <%= f.label :wish_instructions %><br>
     <%= f.text_area :wish_instructions, class: "form-control"  %>
   </div>

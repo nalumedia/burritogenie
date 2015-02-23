@@ -15,7 +15,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   root 'pages#home'
   resources :charges
-  resources :purchases, only: [:show]
+  resources :purchases, only: [:show, :index]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

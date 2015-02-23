@@ -1,0 +1,56 @@
+<% if user_signed_in? %>
+
+<h1>Purchases</h1>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Purchase Email</th>
+      <th>Purchase Amount</th>
+      <th>Purchase Info</th>
+      <th>Purchase Status</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @purchases.each do |purchase| %>
+      <tr>
+        <td><%= purchase.email %></td>
+         <td>Item: <%= purchase.description %><br />
+         	   Amount: <%= purchase.amount %></td>
+         <td></td>
+         <td>Wish ID: <%= purchase.wish_id %><br />
+         		 Wish ID: <%= purchase.wish.try(:wish_address) %><br />
+         		 UUID: <%= purchase.uuid %><br />
+
+         </td>
+        <td>
+        	Actions
+     
+
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<% else %>
+YOU DO NOT HAVE PERMISSION TO ENTER THIS AREA 
+<% end %>
+
+  <!-- create_table "purchases", force: true do |t|
+    t.string   "email"
+    t.integer  "amount"
+    t.string   "description"
+    t.string   "currency"
+    t.string   "customer_id"
+    t.string   "card"
+    t.integer  "product_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "uuid"
+    t.integer  "wish_id"
+ -->
