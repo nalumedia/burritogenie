@@ -1,4 +1,7 @@
 <h1>Burrito Directory</h1>
+<% if user_signed_in? %> 
+  <i class="fa fa-map-marker"></i> <%= link_to 'New Burritolocation', new_burritolocation_path %>
+  <% end %>
 <% @burritolocations.each do |burritolocation| %>
 <div class="panel panel-default">
   <div class="panel-heading"><%= burritolocation.burritolocation_name %></div>
@@ -22,6 +25,3 @@
 
 <% end %>
 
-
-
-<%= link_to 'New Burritolocation', new_burritolocation_path %>
