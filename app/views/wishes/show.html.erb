@@ -1,0 +1,39 @@
+
+<h1><%= notice %></h1>
+<p>Thank you for your order. The Genie will deliver ** Product ** to  <%= @wish.wish_address %>, <%= @wish.wish_zip %>. The genie knows your special instructions which are: <%= @wish.wish_instructions %>. Thank you. 
+</p>
+
+<p>In order to complete your purchase please:</p>
+<!-- begin buy button --> 
+																			<%= form_tag charges_path, id: 'chargeForm' do %>
+																	    <script src="https://checkout.stripe.com/checkout.js"></script>
+																	    <%= hidden_field_tag 'stripeToken' %>
+																	    <%= hidden_field_tag 'stripeEmail' %> 
+																	    <%= hidden_field_tag 'amount', 1000 %> 
+																	    <button id="btn-buy" type="button" class="btn btn-success"><i class="fa fa-motorcycle fa-4x"></i> <h1>Order</h1></button>
+																	    <script>
+																	    var handler = StripeCheckout.configure({
+																	      key: '<%= Rails.configuration.stripe[:publishable_key] %>',
+																	      token: function(token, arg) {
+																	        document.getElementById("stripeToken").value = token.id;
+																	        document.getElementById("stripeEmail").value = token.email;
+																	        document.getElementById("chargeForm").submit();
+																	      }
+																	    });
+																	     document.getElementById('btn-buy').addEventListener('click', function(e) {
+																	      	handler.open({
+																	        name: 'One Burrito',
+																	        description: 'One Burrito, Delivered ($10.00)',
+																	        amount: document.getElementById("amount").value
+																	    });
+																	    e.preventDefault();
+																	   })
+																	  </script>
+																	<% end %>
+																	<!-- end buy button --> 
+																	
+
+<% if user_signed_in? %> 
+<%= link_to 'Edit', edit_wish_path(@wish) %> |
+<%= link_to 'Back', wishes_path %>
+<% end %>

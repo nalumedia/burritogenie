@@ -2,50 +2,7 @@
 <p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
 
 <p>You order of <%= @purchase.description %> was received at <%= @purchase.created_at.to_formatted_s(:long_ordinal) %> and will be delivered promptly.</p>
-	<hr />
-  Pick your flavor. 
-	<%= form_for(@deliverto) do |f| %>
 
-  <% if @deliverto.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@deliverto.errors.count, "error") %> prohibited this deliverto from being saved:</h2>
-
-      <ul>
-      <% @deliverto.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="form-group">
-    <%= f.label "Delivery Address" %><br>
-    <%= f.text_field :deliverto_street, class: "form-control" %>
-  </div>
-  <div class="actions">
-  <%= hidden_field_tag :deliverto_uuid, :value => @purchase.uuid %>
-   </div>
-
-
-
-  <div class="form-group">
-    <%= f.label "Zip Code" %><br>
-    <%= f.text_field :deliverto_zip, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label "Phone" %><br>
-    <%= f.text_field :deliverto_phone, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label "Special Instructions For The Genie:" %><br>
-    <%= f.text_area :deliverto_instructions %>
-  </div>
-  <div class="actions">
-    <%= f.submit :value => "Genie, Bring Me My Burrito", class: "btn btn-default" %>
-  </div>
-<% end %>
-
-</hr>
 
 <!-- <p>Order Email: <%= @purchase.email %></p>
 <p>Order PID: <%= @purchase.id %></p>

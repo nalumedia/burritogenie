@@ -1,0 +1,33 @@
+<%= form_for(@wish) do |f| %>
+  <% if @wish.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@wish.errors.count, "error") %> prohibited this wish from being saved:</h2>
+
+      <ul>
+      <% @wish.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :wish_address %><br>
+    <%= f.text_field :wish_address, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :wish_phone %><br>
+    <%= f.text_field :wish_phone, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :wish_zip %><br>
+    <%= f.text_field :wish_zip, class: "form-control"  %>
+  </div>
+  <div class="form-group">
+    <%= f.label :wish_instructions %><br>
+    <%= f.text_area :wish_instructions, class: "form-control"  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

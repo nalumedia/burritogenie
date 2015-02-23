@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  wish_address: MyString
+  wish_phone: MyString
+  wish_zip: MyString
+  wish_instructions: MyText
+
+two:
+  wish_address: MyString
+  wish_phone: MyString
+  wish_zip: MyString
+  wish_instructions: MyText

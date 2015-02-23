@@ -19,8 +19,13 @@
 			<div class="container">
 							<%= yield %>
               <div class="row"><div class="footertext">
-              	<div class="col-md-12 text-center" id="footertext"><br /><%= link_to "Home", root_path %> <i class="fa fa-map-marker"></i> <%= link_to "Burrito Directory", burritolocations_path %> | 
+              	<div class="col-md-12 text-center" id="footertext"><br /><%= link_to "Home", root_path %>
+                     <i class="fa fa-star"></i> &nbsp; 
+                  <%= link_to "Wishes", wishes_path %>
+                  &nbsp; |
+                 <i class="fa fa-map-marker"></i> <%= link_to "Burrito Directory", burritolocations_path %> | 
                   <% if user_signed_in? %>
+               
                   <i class="fa fa-user"></i> &nbsp; 
                   <%= link_to "Locations", burritolocations_path %>
                   &nbsp; |

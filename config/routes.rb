@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :wishes
+
   resources :burritolocations
 
   resources :contacts
