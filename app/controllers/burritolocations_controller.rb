@@ -69,6 +69,6 @@ class BurritolocationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def burritolocation_params
-      params.require(:burritolocation).permit(:burritolocation_name, :burritolocation_phone, :burritolocation_url, :burritolocation_description, :burritolocation_address)
+      params.require(:burritolocation).permit(:burritolocation_name, :image, :burritolocation_phone, :burritolocation_url, :burritolocation_description, :burritolocation_address)
     end
 end

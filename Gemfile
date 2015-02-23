@@ -23,6 +23,9 @@ gem 'jbuilder', '~> 2.0'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'devise'
 
+gem 'paperclip', github: 'thoughtbot/paperclip'
+gem 'aws-sdk', '~> 1.20.0'
+
 
 #added gems
 gem 'bootstrap-sass'

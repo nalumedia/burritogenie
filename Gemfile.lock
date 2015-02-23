@@ -17,6 +17,16 @@ GIT
       sass-rails
 
 GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 97c78efdce65b07c6425e76000f34f1909a257cb
+  specs:
+    paperclip (4.2.1)
+      activemodel (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (~> 0.5.5)
+      mime-types
+
+GIT
   remote: https://github.com/stripe/stripe-ruby
   revision: 085ad6cfb303f9e470d161f1b62370e746702432
   specs:
@@ -58,6 +68,10 @@ GEM
     arbre (1.0.3)
       activesupport (>= 3.0.0)
     arel (5.0.1.20140414130214)
+    aws-sdk (1.20.0)
+      json (~> 1.4)
+      nokogiri (>= 1.4.4, < 1.6.0)
+      uuidtools (~> 2.1)
     bcrypt (3.1.10)
     bootstrap-sass (3.3.0.1)
       sass (~> 3.2)
@@ -65,6 +79,10 @@ GEM
       sass (~> 3.2)
       thor
     builder (3.2.2)
+    climate_control (0.0.3)
+      activesupport (>= 3.0)
+    cocaine (0.5.5)
+      climate_control (>= 0.0.3, < 1.0)
     coffee-rails (4.0.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.0)
@@ -118,6 +136,7 @@ GEM
     minitest (5.5.1)
     multi_json (1.10.1)
     netrc (0.10.2)
+    nokogiri (1.5.11)
     orm_adapter (0.5.0)
     pg (0.17.1)
     polyamorous (1.1.0)
@@ -189,6 +208,7 @@ GEM
     uglifier (2.7.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    uuidtools (2.1.4)
     warden (1.2.3)
       rack (>= 1.0)
 
@@ -197,6 +217,7 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin!
+  aws-sdk (~> 1.20.0)
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise
@@ -204,6 +225,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   letter_opener
+  paperclip!
   pg
   rails (= 4.1.7)
   rails_12factor

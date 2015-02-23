@@ -14,6 +14,7 @@
     <% @burritolocations.each do |burritolocation| %>
       <tr>
         <td><%= burritolocation.burritolocation_name %><br />
+          <%= image_tag burritolocation.image.url(:medium) %><br />
           Phone: <%= burritolocation.burritolocation_phone %><br />
           Url: <%= burritolocation.burritolocation_url %>
         </td>
