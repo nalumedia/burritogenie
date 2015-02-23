@@ -1,33 +1,27 @@
-<h1>Listing burritolocations</h1>
+<h1>Burrito Directory</h1>
+<% @burritolocations.each do |burritolocation| %>
+<div class="panel panel-default">
+  <div class="panel-heading"><%= burritolocation.burritolocation_name %></div>
+  <div class="panel-body">
+    <%= burritolocation.burritolocation_name %><br />
+          <%= image_tag burritolocation.image.url(:medium) %><br /><br />
+          <i class="fa fa-map-marker"></i>: <%= burritolocation.burritolocation_address %><br />
+          <i class="fa fa-phone"></i>: <%= burritolocation.burritolocation_phone %><br />
+          <i class="fa fa-desktop"></i> <%= link_to "Website", burritolocation.burritolocation_url %>
+          <br /> <br />
+          <%= burritolocation.burritolocation_description %>
+  </div>
+  <div class="panel-footer">
+  <% if user_signed_in? %>
+  <%= link_to 'Show', burritolocation %> | 
+  <%= link_to 'Edit', edit_burritolocation_path(burritolocation) %> |
+  <%= link_to 'Destroy', burritolocation, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% end %>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Burrito Location</th>
-      <th>Description</th>
-      <th>Address</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<% end %>
 
-  <tbody>
-    <% @burritolocations.each do |burritolocation| %>
-      <tr>
-        <td><%= burritolocation.burritolocation_name %><br />
-          <%= image_tag burritolocation.image.url(:medium) %><br />
-          Phone: <%= burritolocation.burritolocation_phone %><br />
-          Url: <%= burritolocation.burritolocation_url %>
-        </td>
-        <td><%= burritolocation.burritolocation_description %></td>
-        <td><%= burritolocation.burritolocation_address %></td>
-        <td><%= link_to 'Show', burritolocation %></td>
-        <td><%= link_to 'Edit', edit_burritolocation_path(burritolocation) %></td>
-        <td><%= link_to 'Destroy', burritolocation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
 
 <%= link_to 'New Burritolocation', new_burritolocation_path %>
