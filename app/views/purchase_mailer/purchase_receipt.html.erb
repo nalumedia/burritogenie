@@ -1,10 +1,5 @@
-<p>The Burrito Genie is grateful for your order, <%= @purchase.email %>.</p>
+<p>Thank you for using the BurritoGenie.</p>
 
-<p>You order of <%= @purchase.description %> was received at <%= @purchase.created_at %> and will be delivered promptly.</p>
-
-<p>Order Email: <%= @purchase.email %></p>
-<p>Order PID: <%= @purchase.id %></p>
-<p>Amount: <%= @purchase.amount %></p>
-<p>Description: <%= @purchase.description %></p>
-<p>Order Receieved: <%= @purchase.created_at %></p>
-<p>Order uuid: <%= @purchase.uuid %></p>
+<p>You order of:
+	(1) <%= @purchase.wish.wish_type %> Burrito was received at <%= @purchase.created_at %> and will be delivered promptly.</p>
+	<p>The BurritoGenie billed your card: <%= @purchase.amount %></p>

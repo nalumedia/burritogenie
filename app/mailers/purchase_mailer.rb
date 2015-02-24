@@ -5,7 +5,7 @@ layout 'purchase_mailer'
 
  def purchase_receipt purchase
  @purchase = purchase
- mail to: purchase.email, subject: "Your Burrito Is On The Way!", bcc: "burritogenie@nalumedia.com"
+ mail to: purchase.email, subject: "Your Burrito Is On The Way!"
 
 
   end
